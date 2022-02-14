@@ -61,9 +61,18 @@ Para la impermeabilización  del barco, hemos hecho un cambio de la carcasa que 
 
 En el proyecto teníamos que hacer una PCB para juntar los componentes electrónicos. Esta ha sido diseñada en Proteus y después fresada con una LPKF.
 En la siguiente imagen podemos ver el diseño de la placa: 
+
 ![pcb](https://user-images.githubusercontent.com/96468247/153840500-279f602c-aeee-4c96-9c1c-1baceb9a48c8.PNG)
+
 Y en la siguiente imagen podemos apreciar el resultado final:
 
 ![1644832259025](https://user-images.githubusercontent.com/96468247/153840832-f83742b2-d365-4516-96bd-5b9d06a57b08.jpg)
 
+# **ALIMENTACION** 
+Para la alimentación del barco utilizamos la placa solar  HQST-100DB que nos provee con una potencia máxima de 100W, un voltaje máximo de 21,7V y una corriente máxima de 6,1 Amperios.
 
+![1644832649844](https://user-images.githubusercontent.com/96468247/153860980-17192ad2-77d9-4fa3-9d87-7f672da59693.jpg)
+
+Pero este voltaje es muy alto para los ESC-s por ello, utilizamos don Step-Downs para bajar el voltaje a 16V y asi alimentar los ESCs que controlan los motores.
+
+![1644840467964](https://user-images.githubusercontent.com/96468247/153862948-881a197c-f783-4474-bf1a-ff32fdf410ca.jpg)
