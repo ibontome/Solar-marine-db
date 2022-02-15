@@ -109,18 +109,18 @@ void motorra(){
     Serial.println(" eskuibira");
     Serial.println("------------");
     direkzioa = posizioa;
-    ESC1.write(30*Vel);
-    ESC2.write(100 *Vel);
-    delay(100);
+    ESC1.write(20*Vel);
+    ESC2.write(130 *Vel);
+    //delay(100);
     break;
   }
   while ((angeluak < 80) and (angeluak > 5)) {
     Serial.println(" ezkerrera");
     Serial.println("------------");
-    ESC1.write(100*Vel);
-    ESC2.write(30*Vel);
+    ESC1.write(130*Vel);
+    ESC2.write(20*Vel);
     direkzioa = posizioa;
-    delay(100);
+    //delay(100);
     break;
   }
   while ((angeluak < 99) and (angeluak > 80)) {
@@ -132,70 +132,70 @@ void motorra(){
       if (((posizioa - direkzioa) < 354) and ((posizioa - direkzioa) >= 180))  {
         Serial.println(" aurrera ezker 355");
         Serial.println("------------");
-        ESC1.write(100*Vel);
-        ESC2.write(90*Vel);
-        delay(100);
+        ESC1.write(130*Vel);
+        ESC2.write(60*Vel);
+        //delay(100);
       }
      else if (((posizioa - direkzioa) < 180) and ((posizioa - direkzioa) > 5)) {
         Serial.println(" aurrera eskuin 355");
         Serial.println("------------");
-        ESC1.write(90*Vel);
-        ESC2.write(100*Vel);
-        delay(100);
+        ESC1.write(60*Vel);
+        ESC2.write(130*Vel);
+       // delay(100);
       }
       else {
         Serial.println(" aurrera aurrera 355");
         Serial.println("------------");
-        ESC1.write(100*Vel);
-        ESC2.write(100*Vel);
-        delay(100);
+        ESC1.write(130*Vel);
+        ESC2.write(130*Vel);
+        //delay(100);
       }
     }
     else if ((posizioa > 0) and (posizioa < 5)) {
       if (((posizioa - direkzioa) <= -180) and ((posizioa - direkzioa) > -355))  {
         Serial.println(" aurrera eskuin 0");
         Serial.println("------------");
-        ESC1.write(90*Vel);
-        ESC2.write(100*Vel);
-        delay(100);
+        ESC1.write(60*Vel);
+        ESC2.write(130*Vel);
+       // delay(100);
       }
       else if (((posizioa - direkzioa) < -5) and ((posizioa - direkzioa) > -180)) {
         
         Serial.println(" aurrera ezker 0");
         Serial.println("------------");
-        ESC1.write(100*Vel);
-        ESC2.write(90*Vel);
-        delay(100);
+        ESC1.write(130*Vel);
+        ESC2.write(60*Vel);
+       // delay(100);
       }
       else {
         Serial.println(" aurrera aurrera 0");
         Serial.println("------------");
-        ESC1.write(100*Vel);
-        ESC2.write(100*Vel);
-        delay(100);
+        ESC1.write(130*Vel);
+        ESC2.write(130*Vel);
+        //delay(100);
       }
     }
     else {
       if ((posizioa - direkzioa) < -5) {
         Serial.println(" aurrera ezker");
         Serial.println("------------");
-        ESC1.write(100*Vel);
-        ESC2.write(90*Vel);
-        delay(100);
+        ESC1.write(130*Vel);
+        ESC2.write(60*Vel);
+        //delay(100);
       }
       else if ((posizioa - direkzioa) > 5) {
         Serial.println(" aurrera eskuin");
         Serial.println("------------");
-        ESC1.write(90*Vel);
-        ESC2.write(100*Vel);
-        delay(100);
+        ESC1.write(60*Vel);
+        ESC2.write(130*Vel);
+        //delay(100);
       }
       else {
         Serial.println(" aurrera aurrera");
         Serial.println("------------");
-        ESC1.write(100*Vel);
-        ESC2.write(100*Vel);
-        delay(100);
+        ESC1.write(130*Vel);
+        ESC2.write(130*Vel);
+        //delay(100);
       }
     }
     break;
@@ -212,18 +212,18 @@ void mppt() {
     }
     else {
       pwm = pwm - 20;
-      delay(100);
+      //delay(100);
     }
   }
 
   else {
     if (voltage >= 17) {
       pwm = pwm + 2;
-      delay(100);
+      //delay(100);
     }
     else {
       pwm = pwm - 20;
-      delay(100);
+      //delay(100);
     }
   }
   power_before = power;
