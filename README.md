@@ -1,78 +1,87 @@
 # Solar-marine-db
 
-# **INTRODUCCIÓN**
+# **INTRODUCTION**
 
-Para terminar este segundo año de mantenimiento electrónico se nos ha planteado seguir con el proyecto empezado el año pasado que consiste en un barco alimentado mediante una placa solar. Aparte de esto debe incluir un piloto automático programado mediante arduino y que la placa solar se oriente hacia el sol automáticamente también durante todo el trayecto para así conseguir el máximo rendimiento. Este proyecto participará en el torneo que se celebrará el 18 de junio de 2022 en Praia da Ribeira, Baiona.
+To finish this second year of electronic maintenance we have had to continue with the project started last year, which consists of a boat powered by a solar panel. Apart from this, it should include an autopilot programmed with arduino and the solar panel should automatically orient itself towards the sun during the whole journey in order to achieve maximum performance. This project will participate in the tournament to be held on 18 June 2022 in Praia da Ribeira, Baiona.
 
-# **Bases de la regata**
+# **Rules of the race**
 
-Nuestro proyecto es un barco solar, este proyecto tenemos que llevarlo a la regata solar marine. Para poder participar en el proyecto tenemos que cumplir una serie de requisitos y necesidades.
+Our project is a solar boat, and we have to take this project to the solar marine race. In order to participate in the project we have to fulfil a number of requirements and needs.
 
-- El barco como fuente de alimentación dispondrá de una placa solar, solamente de una placa solar, por lo tanto, no se puede utilizar ninguna batería para almacenar energía para cuando no haya tanta luz.
-- El barco lo tenemos que controlar con una emisora.
-- El barco hay que impulsarlo con motores eléctricos y se pueden utilizar más de uno.
-- El barco lo podemos construir como queramos y con los materiales que deseemos.
-- Solamente podremos utilizar unas pilas para alimentar la emisora del barco (mando radiocontrol). Siguiendo estos pasos construiremos nuestro barco solar.
+- The boat will be powered by a solar panel, only a solar panel, so no batteries can be used to store energy for when there is not so much light.
+- The boat has to be controlled by a transmitter.
+- The boat has to be driven by electric motors and more than one can be used.
+- The boat can be built as we want and with the materials we want.
+- We can only use batteries to power the boat's transmitter (radio control). Following these steps we will build our solar boat.
 
-# **PROCEDIMIENTO**
 
-Para empezar tuvimos que ver en qué condiciones estaba el barco y que necesitaba. Después de la inspección procedimos a hacer una planificación del proyecto. Este proyecto sobre todo necesitaba programación,  una pcb y unas mejoras en el chasis. 
+# **PROCEDURE**
 
-PARTES QUE COMPONEN EL PROYECTO Y EL FUNCIONAMIENTO:
+To start with we had to see what condition the ship was in and what it needed. After the inspection we proceeded to do a project planning. This project mainly needed programming, a pcb and some improvements in the chassis. 
 
-El proyecto se divide en 4 partes:
+# **PARTS THAT MAKE UP THE PROJECT AND HOW IT WORKS**
 
-![PARTES DEL BARCO](https://user-images.githubusercontent.com/96468247/153825744-0b8aecc6-bf2c-4eed-984f-d729d88553c6.png)
+The project is divided into 4 parts:
+
+![490x_dia-mundial-agua-debajo-luz-azul-olas-brillo-getty-770x420](https://user-images.githubusercontent.com/96468247/154023383-b8c38dc0-6402-46eb-8655-49e07378b523.jpg)
 
 # **ARDUINO**
 
-Lo más importante de este proyecto era la programación de un arduino nano para hacer el piloto automático y el MPPT. Para ello tuvimos que hacer dos programas generales y al finalizarlos creamos un programa llamado Solar Marine que juntaba los dos programas anteriores.
+The most important part of this project was the programming of an arduino nano to make the autopilot and the MPPT. For this we had to make two general programs and when we finished them we created a program called Solar Marine that put together the two previous programs.
 
-**PILOTO AUTOMATICO**
+**AUTOPILOT**
 
-Para el piloto automático, primero tuvimos que conseguir manejar los motores con el mando. Segundo, tuvimos que conectar el teensy con el arduino nano por el serial, ya que el teensy envía datos al módulo bluetooth por el serial. Al conectarlos tuvimos que hacer un programa solo para seleccionar la orientación de la brújula. Finalmente teniendo los dos valores hicimos un programa que sigue la dirección que le asignamos con el mando y hace correcciones para que no se desvíe.
+For the autopilot, we first had to get the motors to work with the controller. Secondly, we had to connect the teensy to the arduino nano via serial, as the teensy sends data to the bluetooth module via serial. When connecting them we had to make a program just to select the compass orientation. Finally having the two values we made a program that follows the direction that we assign with the remote control and makes corrections so that it does not deviate.
 
 **MPPT**
 
-El MPPT sirve para conseguir todo el rato la mayor potencia posible y para ello varía la velocidad de los motores para subir o bajar la corriente. El MPPT lo tuvimos que programar con arduino. Para ello, lo primero fue conseguir el voltaje y la corriente que teníamos. Después, tuvimos que conseguir la potencia y finalmente hicimos el programa que varía la velocidad de los motores dependiendo de los valores que tenemos.
+The MPPT is used to achieve the highest possible power at all times and to do this it varies the speed of the motors to increase or decrease the current. We had to program the MPPT with arduino. To do this, the first thing we had to do was to get the voltage and current we had. Then, we had to get the power and finally we made the program that varies the speed of the motors depending on the values we have.
 
-# **MECANICA** 
+# **MECHANICS** 
 
-En la parte mecánica no tuvimos que hacer mucha cosa ya que el año pasado ya se hizo casi todo, nosotros solo le hemos añadido unas mejoras. 
+On the mechanical side we didn't have to do much, as almost everything was already done last year, we just added a few improvements. 
 
-**LISTONES**
+**STRIPS**
 
-Añadimos unos listones de madera para reforzar la estabilidad del barco.
+We added some wooden slats to reinforce the stability of the boat.
+
 ![1644829115268](https://user-images.githubusercontent.com/96468247/153832324-f5b47bdc-34f0-4172-8ef1-35426df3f29a.jpg)
 
-**GOMAS DE LA PLACA**
+**PANEL RUBBERS**
 
-Cuando recibimos el barco, las gomas que sujetan las guías de los motores estaban en mal estado, seleccionamos otro material más resistente y lo cambiamos.
+When we took delivery of the boat, the rubbers that hold the engine guides were in bad condition, so we selected a more resistant material and replaced it.
 ![1644831005396](https://user-images.githubusercontent.com/96468247/153837278-2c415607-8189-47f1-a397-191e0adfbcf5.jpg)
 
-**IMPERMEABILIZACION**
+**WATERPROOFING**
 
-Para la impermeabilización  del barco, hemos hecho un cambio de la carcasa que cubría los circuitos por uno nuevo y hemos añadido prensaestopas para impermeabilizar más.
+For the waterproofing of the boat, we have replaced the casing covering the circuits with a new one and added cable glands for further waterproofing.
 
 ![1644831437435](https://user-images.githubusercontent.com/96468247/153838426-fdee1404-bff1-40a5-b1fb-7d1962980dff.jpg)
 
 
-# **ELECTRONICA** 
-
-En el proyecto teníamos que hacer una PCB para juntar los componentes electrónicos. Esta ha sido diseñada en Proteus y después fresada con una LPKF.
-En la siguiente imagen podemos ver el diseño de la placa: 
+# **ELECTRONICS** 
+In the project we had to make a PCB to put the electronic components together. This has been designed in Proteus and then milled with a LPKF.
+In the following image we can see the design of the board: 
 
 ![pcb](https://user-images.githubusercontent.com/96468247/153840500-279f602c-aeee-4c96-9c1c-1baceb9a48c8.PNG)
 
-Y en la siguiente imagen podemos apreciar el resultado final:
+And in the following image we can see the final result:
 
 ![1644832259025](https://user-images.githubusercontent.com/96468247/153840832-f83742b2-d365-4516-96bd-5b9d06a57b08.jpg)
 
-# **ALIMENTACION** 
-Para la alimentación del barco utilizamos la placa solar  HQST-100DB que nos provee con una potencia máxima de 100W, un voltaje máximo de 21,7V y una corriente máxima de 6,1 Amperios.
+# **SUPPLY** 
+For powering the boat we use the HQST-100DB solar panel which provides us with a maximum power of 100W, a maximum voltage of 21.7V and a maximum current of 6.1 Amps.
 
 ![1644832649844](https://user-images.githubusercontent.com/96468247/153860980-17192ad2-77d9-4fa3-9d87-7f672da59693.jpg)
 
-Pero este voltaje es muy alto para los ESC-s por ello, utilizamos don Step-Downs para bajar el voltaje a 16V y asi alimentar los ESCs que controlan los motores.
+But this voltage is too high for the ESCs, so we use Step-Downs to lower the voltage to 16V to power the ESCs that control the motors.
 
 ![1644840467964](https://user-images.githubusercontent.com/96468247/153862948-881a197c-f783-4474-bf1a-ff32fdf410ca.jpg)
+
+# **OPERATION OF THE BOAT** 
+
+In the following image we have the electrical diagram of the project. First we can see how the board feeds two ammeters that are between the step down and the board. These send the current to the arduino. To get the voltage we have two resistors in series to create a voltage divider that goes to the arduino. 
+After lowering the voltage to 16V we feed the ESCs that power the arduino and are controlled by the arduino. With the ESCs we control the motors. For the program that controls the ESCs we need information for this we have connected a radio control. Finally we have connected the arduino with the teensy to know the position of the compass that is connected to it.
+
+![ESKEMA](https://user-images.githubusercontent.com/96468247/154018587-f755eb97-5c1e-47d5-851b-aa32b99610f3.png)
+
