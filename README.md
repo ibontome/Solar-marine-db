@@ -83,5 +83,5 @@ But this voltage is too high for the ESCs, so we use Step-Downs to lower the vol
 In the following image we have the electrical diagram of the project. First we can see how the board feeds two ammeters that are between the step down and the board. These send the current to the arduino. To get the voltage we have two resistors in series to create a voltage divider that goes to the arduino. 
 After lowering the voltage to 16V we feed the ESCs that power the arduino and are controlled by the arduino. With the ESCs we control the motors. For the program that controls the ESCs we need information for this we have connected a radio control. Finally we have connected the arduino with the teensy to know the position of the compass that is connected to it.
 
-![ESKEMA](https://user-images.githubusercontent.com/96468247/154018587-f755eb97-5c1e-47d5-851b-aa32b99610f3.png)
+![Captura](https://user-images.githubusercontent.com/96468247/154062460-d0ea52d9-f697-4e18-9102-274636bf4b02.PNG)
 
