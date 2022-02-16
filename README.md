@@ -32,10 +32,14 @@ The most important part of this project was the programming of an arduino nano t
 **AUTOPILOT**
 
 For the autopilot, we first had to get the motors to work with the controller. Secondly, we had to connect the teensy to the arduino nano via serial, as the teensy sends data to the bluetooth module via serial. When connecting them we had to make a program just to select the compass orientation. Finally having the two values we made a program that follows the direction that we assign with the remote control and makes corrections so that it does not deviate.
+The following algorithm has been used to program the Autopilot code:
 
-**MPPT**
+**MPPT**![Piloto automatico algoritmo](https://user-images.githubusercontent.com/99804190/154353780-bb3c349d-86fc-4285-abf0-5da22feb9144.PNG)
 
 The MPPT is used to achieve the highest possible power at all times and to do this it varies the speed of the motors to increase or decrease the current. We had to program the MPPT with arduino. To do this, the first thing we had to do was to get the voltage and current we had. Then, we had to get the power and finally we made the program that varies the speed of the motors depending on the values we have.
+The following algorithm has been used to program the MPPT code:
+
+![MPPT algoritmo](https://user-images.githubusercontent.com/99804190/154353310-60933a73-43ca-4bd5-9331-0257c4e54f84.jpg)
 
 # **MECHANICS** 
 
